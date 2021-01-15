@@ -25,10 +25,83 @@
 
 # 📗 User Stories
 
+<details>
+  <summary>Click to View</summary>
+  
+  <table>
+  <tr>
+    <th>Scenario 01</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Behavior</td>
+    <td>As Pierre, I want to view all of my Treats and Flavors.</td>
+  </tr>
+  <tr>
+    <td>Input</td>
+    <td>Click on "Flavors" or "Treats" link</td>
+  </tr>
+  <tr>
+    <td>Output</td>
+    <td>Display page with list of names being links to all flavors or treats</td>
+  </tr>
+  <tr>
+    <td>Completion</td>
+    <td>✅</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Scenario 02</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Behavior</td>
+    <td>As Pierre I want to be able to Create, Delete, Edit, and Connect all Treats and Flavors as I'd like.</td>
+  </tr>
+  <tr>
+    <td>Input</td>
+    <td>Click action link to Create, Delete, Edit, Connect object(s)</td>
+  </tr>
+  <tr>
+    <td>Output</td>
+    <td>Do the Create/Delete/etc. that was inputed</td>
+  </tr>
+  <tr>
+    <td>Completion</td>
+    <td>✅</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Scenario 03</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Behavior</td>
+    <td>As Pierre I want only my registered users to be able to Create, Edit, or Delete objects.</td>
+  </tr>
+  <tr>
+    <td>Input</td>
+    <td>User logs into the site</td>
+  </tr>
+  <tr>
+    <td>Output</td>
+    <td>Only after successful login do the Create, Delete, and Edit buttons show.</td>
+  </tr>
+  <tr>
+    <td>Completion</td>
+    <td>✅</td>
+  </tr>
+</table>
+</details>
+
 # 📊 SQL Schema
 
 <center>
-    <img style="width: 50% height: 50%" src="./ReadMeAssets/recipeSchema.png">
+    <img style="width: 50% height: 50%" src="https://i.ibb.co/3dtdBmb/Screen-Shot-2021-01-15-at-3-28-06-PM.png">
 </center>
 
 # ⚙️ Technologies Used
