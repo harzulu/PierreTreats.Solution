@@ -4,16 +4,16 @@
 
 @model PierreTreats.Models.Flavor
 
-<h1>Edit</h1>
-
-<h3>Edit this Flavor: @Html.DisplayFor(model => model.Name)</h3>
+<h1>Add a Treat</h1>
+<hr>
+<h3>Add a Treat for this Flavor: @Html.DisplayFor(model => model.Name)</h3>
 
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.FlavorId)
 
-  @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
+  @Html.Label("Select Treat")
+  @Html.DropDownList("TreatId")
 
   <input type="submit" value="Save" />
 }
