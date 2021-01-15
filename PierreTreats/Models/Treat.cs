@@ -1,0 +1,17 @@
+using System.Collections.Generic;
+
+namespace PierreTreats.Models
+{
+    public class Flavor
+    {
+      public Flavor()
+      {
+        this.Flavors = new HashSet<TreatFlavor>();
+      }
+
+      public int TreatId { get; set; }
+      public string Name { get; set; }
+
+      public ICollection<TreatFlavor> Flavors { get; set; }
+    }
+}
