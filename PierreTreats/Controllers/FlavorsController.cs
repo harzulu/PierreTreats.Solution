@@ -100,5 +100,14 @@ namespace PierreTreats.Controllers
         _db.SaveChanges();
         return RedirectToAction("Index");
       }
+
+      [HttpPost]
+      public ActionResult DeleteTreat(int joinId)
+      {
+        var joinEntry = _db.TreatFlavor.FirstOrDefault(entry => entry.TreatFlavorId == joinId);
+        _db.TreatFlavor.Remove(joinEntry);
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+      }
     }
 }
