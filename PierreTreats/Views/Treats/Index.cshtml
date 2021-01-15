@@ -2,6 +2,7 @@
   Layout = "_Layout";
 }
 
+@using System.Security.Claims
 @using PierreTreats.Models;
 @model List<PierreTreats.Models.Treat>;
 
@@ -17,13 +18,15 @@
   <li>@Html.ActionLink($"{treat.Name}", "Details", new { id = treat.TreatId })</li>
 }
 
-
-<nav class="navbar navbar-light">  
-  <div class="container-fluid" id="nav-background">  
-    <ul class="nav navbar-nav">
-      <button type="button" class="btn btn-dark">
-        <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span><li>@Html.ActionLink("Add new Treat", "Create")</li>  
-      </button>
-    </ul>
-  </div>
-</nav>
+@if (User.Identity.IsAuthenticated)
+{
+  <nav class="navbar navbar-light">  
+    <div class="container-fluid" id="nav-background">  
+      <ul class="nav navbar-nav">
+        <button type="button" class="btn btn-dark">
+          <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span><li>@Html.ActionLink("Add new Treat", "Create")</li>  
+        </button>
+      </ul>
+    </div>
+  </nav>
+}

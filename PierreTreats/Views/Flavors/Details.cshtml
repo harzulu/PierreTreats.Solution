@@ -28,18 +28,21 @@ else
   </ul>
 }
 
-<nav class="navbar navbar-light">  
-  <div class="container-fluid" id="nav-background">  
-    <ul class="nav navbar-nav">
-      <button type="button" class="btn btn-dark">
-        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><li>@Html.ActionLink("Edit Flavor", "Edit", new { id = Model.FlavorId })</li>  
-      </button>
-      <button type="button" class="btn btn-dark">
-        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span><li>@Html.ActionLink("Delete Flavor", "Delete", new { id = Model.FlavorId })</li>  
-      </button>
-      <button type="button" class="btn btn-dark">
-        <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span><li>@Html.ActionLink("Add Treat to this Flavor", "AddTreat", new { id = Model.FlavorId })</li>  
-      </button>    
-    </ul>  
-  </div>  
-</nav>
+@if (User.Identity.IsAuthenticated)
+{
+  <nav class="navbar navbar-light">  
+    <div class="container-fluid" id="nav-background">  
+      <ul class="nav navbar-nav">
+        <button type="button" class="btn btn-dark">
+          <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><li>@Html.ActionLink("Edit Flavor", "Edit", new { id = Model.FlavorId })</li>  
+        </button>
+        <button type="button" class="btn btn-dark">
+          <span class="glyphicon glyphicon-trash" aria-hidden="true"></span><li>@Html.ActionLink("Delete Flavor", "Delete", new { id = Model.FlavorId })</li>  
+        </button>
+        <button type="button" class="btn btn-dark">
+          <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span><li>@Html.ActionLink("Add Treat to this Flavor", "AddTreat", new { id = Model.FlavorId })</li>  
+        </button>    
+      </ul>  
+    </div>  
+  </nav>
+}
