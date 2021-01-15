@@ -2,9 +2,9 @@ using System.Collections.Generic;
 
 namespace PierreTreats.Models
 {
-    public class Flavor
+    public class Treat
     {
-      public Flavor()
+      public Treat()
       {
         this.Flavors = new HashSet<TreatFlavor>();
       }
