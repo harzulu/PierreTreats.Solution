@@ -36,17 +36,22 @@ namespace PierreTreats.Controllers
         return View(thisFlavor);
       }
 
-      public ActionResult Create()
+      public ActionResult Create(int id)
       {
+        ViewBag.TreatId = id;
         return View();
       }
 
       [HttpPost]
-      public ActionResult Create(Flavor flavor)
+      public ActionResult Create(Flavor flavor, int TreatId)
       {
         _db.Flavors.Add(flavor);
+        if (TreatId != 0)
+        {
+          _db.TreatFlavor.Add(new TreatFlavor() { TreatId = TreatId, FlavorId = flavor.FlavorId });
+        }
         _db.SaveChanges();
-        return RedirectToAction("Details", new { id = flavor.FlavorId });
+        return RedirectToAction("Create", new { id = TreatId });
       }
 
       public ActionResult Edit(int id)

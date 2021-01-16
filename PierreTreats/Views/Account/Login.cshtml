@@ -6,6 +6,11 @@
 
 @model LoginViewModel
 
+@if (ViewBag.value == false)
+{
+  <h3>There was a problem! Try again.</h3>
+}
+
 <h2>Log in with your account</h2>
 <hr />
 @using (Html.BeginForm())

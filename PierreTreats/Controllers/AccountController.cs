@@ -39,6 +39,7 @@ namespace PierreTreats.Controllers
             }
             else
             {
+                ViewBag.value = false;
                 return View();
             }
         }
@@ -58,6 +59,7 @@ namespace PierreTreats.Controllers
             }
             else
             {
+                ViewBag.value = false;
                 return View();
             }
         }

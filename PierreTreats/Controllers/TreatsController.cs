@@ -46,7 +46,7 @@ namespace PierreTreats.Controllers
       {
         _db.Treats.Add(Treat);
         _db.SaveChanges();
-        return RedirectToAction("Details", new { id = Treat.TreatId });
+        return RedirectToAction("Create", "Flavors", new { id = Treat.TreatId });
       }
 
       public ActionResult Edit(int id)

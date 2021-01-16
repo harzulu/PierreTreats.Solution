@@ -6,6 +6,11 @@
 
 @model RegisterViewModel
 
+@if (ViewBag.value == false)
+{
+  <h3>There was a problem! Try again.</h3>
+}
+
 <h2>Register a new user</h2>
 <hr />
 @using (Html.BeginForm("Register", "Account", FormMethod.Post))
