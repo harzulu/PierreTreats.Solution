@@ -4,3 +4,18 @@
 <h1>Pierre's Treats!</h1>
 <h3>Welcome back to Pierre's!</h3>
 <p>Select what new treats or falvors you would like to view above.</p>
+
+<h3>If you would like to search the database, use the form below!</h3>
+@using (Html.BeginForm())
+{
+  <p>Select what you would like to search by:</p>
+  <select class="form-control" id="SearchOption" name="SearchOption">
+    <option>Select an option</option>
+    <option>Treat</option>
+    <opttion>Flavor</opttion>
+  </select>
+
+  @Html.Label("Search Term: ");
+  @Html.TextBox("SearchTerm");
+  <input type="submit" value="Search!" />
+}
