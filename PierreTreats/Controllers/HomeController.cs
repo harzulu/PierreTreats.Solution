@@ -19,7 +19,8 @@ namespace PierreTreats.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      return View();
+      ViewBag.Treats = _db.Treats.ToList();
+      return View(_db.Flavors.ToList());
     }
 
     [HttpPost]

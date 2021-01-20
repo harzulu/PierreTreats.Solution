@@ -11,14 +11,14 @@
 
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name)
-  <input type="submit" value="Add new Flavor" />
+  <input type="submit" value="Add Flavor" />
 }
 
 <nav class="navbar navbar-light">  
   <div class="container-fluid" id="nav-background">  
     <ul class="nav navbar-nav">
       <button type="button" class="btn btn-dark">
-        <span class="glyphicon glyphicon-check" aria-hidden="true"></span><li>@Html.ActionLink("Finish", "Details", "Treats", new { id = ViewBag.TreatId })</li>  
+        <span class="glyphicon glyphicon-check" aria-hidden="true"></span><li>@Html.ActionLink("Finish", "Index", "Flavors")</li>  
       </button>
     </ul>  
   </div>  

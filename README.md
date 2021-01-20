@@ -157,7 +157,7 @@
 
 ### AppSettings.json File
 
-You will need to create an `appsettings.json` file in the `Factory` folder. <br>
+You will need to create an `appsettings.json` file in the `PierreTreats` folder. <br>
 Once you have the file made, put in this code: <br>
 ```
 {
